@@ -1,15 +1,60 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+    font-family: "MyWebFont";
+    src: url("GemunuLibre-VariableFont_wght.ttf") format("woff2");
+  }
+
+body {
+    background-color: #fff;
+    font-family: "MyWebFont", Fallback, sans-serif;
+    color: #020d16;
+  }
+
+/* users sessions */
+
+.session-h2 {
+    color: #274b81;
+    font-size: 2em;
+  }
+  
+  .session-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .session-btn {
+    background-color: #51517e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 20px;
+  }
+
+  body {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;   
+  }
+    
+  /* users sessions styles */
+  
+  /* .session-h2 {
+    color: #2276f4;
+  }
+  
+  .session-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .session-btn {
+    background-color: #2276f4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 20px;
+  } */
+  
