@@ -1,7 +1,9 @@
 <div class="foods-c">  
 <h3 class="foods-h3">All Foods</h1>
   <div class="d-flex justify-content-end m-3">
-    <button class='food-new-btn'>Add</button> 
+       <button class='food-new-btn'>
+      <%= link_to 'Add new food', new_food_path, class: "food-new-btn-t" %>
+    </button> 
   </div>
   <table class="table m-3">
     <thead>
