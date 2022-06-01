@@ -66,7 +66,7 @@ end
 
 gem 'devise'
 
-gem 'jsbundling-rails'  # needed for bootstrap javascript
+gem 'jsbundling-rails' # needed for bootstrap javascript
 
 gem 'cssbundling-rails' # Install bootstrap 5
 
