@@ -1,2 +1,11 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+
+<% @recipes.each_with_index do |recipe , index|%>
+<div class="recipe">
+<div class="title">
+<%= link_to recipe.name,"/users/#{recipe.user_id}/recipes/#{recipe.id}"%>
+<%= button_to "Delete 🗑️", user_recipe_path(user_id:recipe.user_id,id: recipe.id) ,method: :delete %>
+<div>
+<p>Description for the recipe.<p>
+<p> <%=recipe.description%></p>
+</div>
+<%end%>
