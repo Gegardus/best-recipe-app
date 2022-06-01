@@ -8,5 +8,4 @@ resources :foods, only: [:index,:show, :new, :create, :destroy]
   resources :users ,only: [:index,:show] do 
     resources :recipes, only: [:index,:show,:destroy]
   end
-
 end
