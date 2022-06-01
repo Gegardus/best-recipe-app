@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :foods
+  has_many :food
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :recipe
