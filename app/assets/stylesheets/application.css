@@ -1,54 +1,51 @@
 @font-face {
-    font-family: "MyWebFont";
-    src: url("GemunuLibre-VariableFont_wght.ttf") format("woff2");
-  }
+  font-family: "MyWebFont";
+  src: url("GemunuLibre-VariableFont_wght.ttf") format("woff2");
+}
 
 body {
-    background-color: #fff;
-    font-family: "MyWebFont", Fallback, sans-serif;
-    color: #020d16;
-  }
+  background-color: #fff;
+  font-family: "MyWebFont", Fallback, sans-serif;
+  color: #020d16;
+}
 
 /* users sessions */
 
 .session-h2 {
-    color: #274b81;
-    font-size: 2em;
-  }
-  
-  .session-c {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .session-btn {
-    background-color: #51517e;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1em;
-    margin-top: 20px;
-  }
+  color: #274b81;
+  font-size: 2em;
+}
 
-  body {
-    background-color: #fff;
-    font-family: 'Poppins', sans-serif;   
-  }
-    
-  /* users sessions styles */
-  
-  /* .session-h2 {
+.session-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.session-btn {
+  background-color: #51517e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+
+
+/* users sessions styles */
+
+/* .session-h2 {
     color: #2276f4;
   }
-  
+
   .session-c {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .session-btn {
     background-color: #2276f4;
     border: none;
@@ -57,7 +54,8 @@ body {
     color: #fff;
     margin-top: 20px;
   } */
-  /* The switch - the box around the slider */
+
+/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -81,11 +79,11 @@ body {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.slider:before {
+.slider::before {
   position: absolute;
   content: "";
   height: 26px;
@@ -93,27 +91,28 @@ body {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked + .slider:before {
+input:checked + .slider::before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
 .slider.round {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.slider.round::before {
   border-radius: 50%;
 }

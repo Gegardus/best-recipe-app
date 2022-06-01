@@ -1,7 +1,7 @@
 <% @puplic_recipe.each_with_index do |recipe , index|%>
 <div class="recipe">
 <div class="title">
-<%= link_to recipe.name,"recipe_foods/#{recipe.id}"%>
+<%= link_to recipe.name,"recipe_public/#{recipe.id}"%>
 <div>
 <p>By:<p>
 <p> <%=recipe.user.name%></p>
