@@ -1,2 +1,9 @@
-<h1>RecipeFoods#index</h1>
-<p>Find me in app/views/recipe_foods/index.html.erb</p>
+<% @puplic_recipe.each_with_index do |recipe , index|%>
+<div class="recipe">
+<div class="title">
+<%= link_to recipe.name,"recipe_foods/#{recipe.id}"%>
+<div>
+<p>By:<p>
+<p> <%=recipe.user.name%></p>
+</div>
+<%end%>
