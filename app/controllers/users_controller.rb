@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  def index; end
+  before_action :authenticate_user!
+  def index
+   end
 
-  def show; end
+  def show
+    @user=User.find_by_id(current_user.id)
+   end
 end

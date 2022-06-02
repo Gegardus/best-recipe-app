@@ -12,7 +12,9 @@
   </head>
 
   <body>
+    <%if(user_signed_in?)%>
    <%= render "layouts/navbar" %>
+   <%end%>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <div class="max-w-6xl pt-4 mx-auto">

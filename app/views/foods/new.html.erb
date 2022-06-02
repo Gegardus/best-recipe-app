@@ -1,6 +1,6 @@
 <div class="foods-new-c">
   <h3 class="foods-new-h3"> Add Food</h3>
-  <%= form_with url: foods_path, scope: :food do |form| %>
+  <%= form_with url: user_foods_path(current_user.id), scope: :food do |form| %>
     <div class="foods-new-div">
     <%= form.label :Name, class:"form-label" %><br>
     <%= form.text_field :name, class: 'form-control', require: true %>
