@@ -64,6 +64,8 @@ group :development do
   # gem "spring"
 end
 
+gem 'cancancan', '~> 3.3'
+
 gem 'devise'
 
 gem 'jsbundling-rails' # needed for bootstrap javascript
