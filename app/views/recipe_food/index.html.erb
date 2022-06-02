@@ -1,9 +1,11 @@
+<h2 class="public-recipe-h2"> Public Recipes</h2>
 <% @public_recipe.each_with_index do |recipe , index|%>
-<div class="recipe">
-<div class="title">
-<%= link_to recipe.name,user_recipe_food_path(user_id:current_user.id,id:recipe.id)%>
-<div>
-<p>By:<p>
-<p> <%=recipe.user.name%></p>
+<div class="row border public-recipe-2c">
+  <%= link_to recipe.name,user_recipe_food_path(user_id:current_user.id,id:recipe.id)%>
+  <div class="col-3"> 
+    <p class="public-recipe-user"> By: <%=recipe.user.name%></p>
+  </div>
 </div>
 <%end%>
+
+

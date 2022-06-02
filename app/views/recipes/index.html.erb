@@ -1,3 +1,21 @@
-<% @recipes.each_with_index do |recipe , index|%> <div class="recipe"> <div class="title"> <%= link_to recipe.name,"/users/#{recipe.user_id}/recipes/#{recipe.id}"%> <%= button_to "Delete 🗑️", user_recipe_path(user_id:recipe.user_id,id: recipe.id) ,method: :delete %> <div> <p>Description for the recipe.<p> <p> <%=recipe.description%></p> </div> <%end%> 
+<div class="recips-c">
+<h3 class="recipes-h3">All Recipes</h3>
+ <div class="d-flex justify-content-end m-3">
+    <button class='food-new-btn'>   
+      <%= link_to "Create new recipe", new_user_recipe_path(current_user.id), class: "recipe-new-btn-t" %>
+    </button> 
+  </div>
 
-<%= link_to "Create new recipe", new_user_recipe_path(current_user.id), class: "nav-link" %>
+  <div class="recipes-col">
+    <% @recipes.each_with_index do |recipe , index| %> 
+    <div class="each-recipe-c">
+      <h3 class="name"><%= link_to recipe.name, "/users/#{recipe.user_id}/recipes/#{recipe.id}"%> </h3> 
+      <div class="recipes-desc">
+        <p>Description for the recipe</p> 
+        <p><%=recipe.description%></p> 
+      </div>
+        <%= button_to "Remove", user_recipe_path(user_id:recipe.user_id,id: recipe.id) ,method: :delete, class: "recipe-dlt-btn" %> 
+    </div>
+    <%end%> 
+  </div>
+</div>
