@@ -1,6 +1,8 @@
-
 Rails.application.routes.draw do
   devise_for :users
+  # route for home page
+  root 'users#index'
+
   resources :foods, only: [:index, :new, :create, :destroy]
 
   resources :recipes, only: [:index, :show, :new, :create, :destroy, :update] do
@@ -10,6 +12,4 @@ Rails.application.routes.draw do
   resources :public_recipes, only: [:index]
 
   resources :shopping_list, only: [:index]
- 
-  root "home_page#index"
 end
