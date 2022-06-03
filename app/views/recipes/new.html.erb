@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with model:@new_recipe,url: user_recipes_path(current_user), method: :post, local: true  do |form| %>
  <div class="mb-3">
       <%= form.label :name ,class: "form-label" %>
@@ -19,5 +20,6 @@
       <%= form.check_box  :public , { checked: true }, true, false  %>
       <%= form.label :public ,class: "form-label " %>
      </div>
-    <%= form.submit "Add new recipe" ,class: "btn btn-outline-dark" %>
+    <%= form.submit "Add new recipe" ,class:  "btn btn-primary" %>
 <% end %>
+     </div>

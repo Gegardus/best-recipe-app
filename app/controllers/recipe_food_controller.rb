@@ -1,9 +1,11 @@
 class RecipeFoodController < ApplicationController
-  def index
-    @public_recipe = Recipe.where(public: true).includes(:user)
-  end
-
-  def show
-    @public_recipe_details = Recipe.find_by_id(params[:id])
+  def create
+    @new_recipe_food = RecipeFood.new
+    @new_recipe_food.recipe_id = params[:recipe_id]
+    @new_recipe_food.food_id = params[:food_id]
+    @new_recipe_food.quantity = params[:quantity]
+    @new_recipe_food.save
+    redirect_to user_recipe_path(user_id: current_user.id, id: params[:recipe_id])
+    flash[:notice] = 'Ingredient added successfully'
   end
 end

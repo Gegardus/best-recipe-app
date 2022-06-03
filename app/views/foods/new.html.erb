@@ -1,3 +1,5 @@
+<div class="container">
+
 <div class="foods-new-c">
   <h3 class="foods-new-h3"> Add Food</h3>
   <%= form_with url: user_foods_path(current_user.id), scope: :food do |form| %>
@@ -16,6 +18,7 @@
     <%= form.number_field :price, class: 'form-control', require: true %>
     </div>
 
-    <%= form.submit "Submit", class: "foods-new-btn" %>
+    <%= form.submit "Submit", class:  "btn btn-primary" %>
   <% end %>
+</div>
 </div>
