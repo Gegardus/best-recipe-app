@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "MyWebFont";
-  src: url("GemunuLibre-VariableFont_wght.ttf") format("woff2");
-}
-
 body {
   background-color: #fff;
   font-family: "MyWebFont", Fallback, sans-serif;
@@ -31,25 +26,6 @@ body {
   font-size: 1em;
   margin-top: 20px;
 }
-
-/* users sessions styles */
-
-/* .session-h2 {
-      color: #2276f4;
-    }
-    .session-c {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .session-btn {
-      background-color: #2276f4;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      color: #fff;
-      margin-top: 20px;
-    } */
 
 /* The switch - the box around the slider */
 .switch {
