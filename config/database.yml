@@ -22,11 +22,10 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
   password: 12345 
+  
 development:
   <<: *default
   database: best_recipe_app_development
-  username: postgres
-  password: 12345 
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
