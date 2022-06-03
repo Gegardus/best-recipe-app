@@ -1,24 +1,59 @@
-# README
+![](https://img.shields.io/badge/Recipe-App-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Recipe App
 
-Things you may want to cover:
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
-* Ruby version
+## Built With
+- Ruby
+- Ruby on rails
+- rspec-rails
+- capybara
+- 💓
 
-* System dependencies
+welcome)
 
-* Configuration
+## Requirements
+In order to work on this project, you need to have the following dependencies installed: 
 
-* Database creation
+- [Ruby](https://www.ruby-lang.org/en/) 
+- [Postgresql](https://www.postgresql.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
+- [Rails](https://rubyonrails.org/)
 
-* Database initialization
+## Get Started
+To get a local copy up and running follow these simple steps.
 
-* How to run the test suite
+```bash
+$ git clone https://github.com/Gegardus/best-recipe-app.git
+$ cd recipe-app
+$ bundle install 
+$ rake db:create 
+$ rake db:migrate 
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Authors
 
-* Deployment instructions
+👤 **Farouq Daif**
 
-* ...
+- GitHub: [@farouqdaif1](https://github.com/farouqdaif1)
+- LinkedIn: [@Farouq Daif ](https://www.linkedin.com/in/farouqdaif/)
+
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc

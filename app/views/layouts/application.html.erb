@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+  
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>   
   </head>
 
   <body>
-    <%= yield %>
+    <%if(user_signed_in?)%>
+   <%= render "layouts/navbar" %>
+   <%end%>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="max-w-6xl pt-4 mx-auto">
+      <%= yield %>
+    </div>                                                                        
+    <div class="session-msg"> 
+      <% if user_signed_in? %>       
+        Signed in as <%= current_user.name %>. This cannot be cheese?&nbsp; <%= button_to "Log out", destroy_user_session_path, :method => :delete, class: "btn btn-secondary" %> 
+      <% else %>       
+        <%= link_to 'Register', new_user_registration_path, class: "sign-out-btn" %> &nbsp;or&nbsp; <%= link_to 'Sign in', new_user_session_path, class: "btn btn-secondary"%> 
+      <% end %> 
+    </div> 
   </body>
 </html>
