@@ -107,11 +107,6 @@ GEM
     diff-lcs (1.5.0)
     digest (3.1.0)
     erubi (1.10.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -282,7 +277,6 @@ DEPENDENCIES
   database_cleaner
   debug
   devise
-  factory_girl_rails
   importmap-rails
   jbuilder
   jsbundling-rails
@@ -298,7 +292,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.1.1p18
 
 BUNDLED WITH
    2.3.14
