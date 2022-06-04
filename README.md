@@ -33,6 +33,10 @@ $ rake db:create
 $ rake db:migrate 
 ```
 
+## Deployment
+
+[Heroku](https://dashboard.heroku.com/apps)
+
 ## Authors
 
 👤 **Vahan Khachvankian**
