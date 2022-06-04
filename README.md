@@ -35,7 +35,7 @@ $ rake db:migrate
 
 ## Deployment
 
-[Heroku](https://dashboard.heroku.com/apps)
+[Heroku](https://dry-cove-82805.herokuapp.com/)
 
 ## Authors
 
