@@ -12,9 +12,9 @@ class FoodsController < ApplicationController
   def create
     @new_food = current_user.foods.new(food_params)
     if @new_food.save
-      redirect_to user_foods_path(current_user.id), flash: { alert: 'Your food is saved' }
+      redirect_to foods_path, flash: { alert: 'Your food is saved' }
     else
-      redirect_to new_user_food_path(current_user.id), flash: { alert: 'Could not save your food' }
+      redirect_to new_food_path, flash: { alert: 'Could not save your food' }
     end
   end
 
@@ -22,7 +22,7 @@ class FoodsController < ApplicationController
     @food = Food.find(params[:id])
     @food.destroy!
     flash[:notice] = 'You have deleted the food!'
-    redirect_to user_foods_path(current_user.id)
+    redirect_to foods_path
   end
 
   private

@@ -44,7 +44,7 @@ gem 'tzinfo-data'
 gem 'bootsnap', require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem 'sassc-rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -70,6 +70,8 @@ group :development do
   # gem "spring"
 end
 
+gem 'bootstrap'
+
 gem 'cancancan', '~> 3.3'
 
 gem 'devise'
@@ -79,3 +81,5 @@ gem 'jsbundling-rails' # needed for bootstrap javascript
 gem 'cssbundling-rails' # Install bootstrap 5
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'simple_form'
