@@ -33,6 +33,10 @@ $ rake db:create
 $ rake db:migrate 
 ```
 
+## Deployment
+
+[Heroku](https://dry-cove-82805.herokuapp.com/)
+
 ## Authors
 
 👤 **Vahan Khachvankian**

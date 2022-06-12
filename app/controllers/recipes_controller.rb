@@ -1,36 +1,54 @@
 class RecipesController < ApplicationController
   def index
-    @user = User.find_by_id(params[:user_id])
-    @recipes = @user.recipes
+    @recipes = Recipe.all
   end
 
   def show
-    @recipe = Recipe.find_by_id(params[:id])
-    @recipe_food_detials = RecipeFood.all.includes(:food, :recipe)
+    @recipe = Recipe.find(params[:id])
   end
 
   def new
-    @new_recipe = Recipe.new
+    redirect_to recipes_path, flash: { alert: 'Please sign up or login!' } unless current_user
+
+    @recipe = Recipe.new
   end
 
   def create
     @new_recipe = current_user.recipes.new(recipe_params)
-    if @new_recipe.save
-      redirect_to user_recipes_path(@new_recipe.user_id)
+    if @new_recipe.save!
+      redirect_to recipes_path, flash: { alert: 'Your recipe is saved' }
     else
-      render :new
+      redirect_to new_recipe_path, flash: { alert: 'Could not save your recipe' }
     end
   end
 
   def destroy
-    deleted_recipe = Recipe.find_by_id(params[:id])
-    deleted_recipe.destroy
-    redirect_to user_recipes_url(params[:user_id])
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy!
+    flash[:notice] = 'You have deleted the food!'
+    redirect_to recipes_path
+  end
+
+  def update
+    if current_user
+
+      @recipe = Recipe.find(params[:id])
+      if @recipe.public
+        @recipe.update(public: false)
+        flash[:notice] = 'You have updated the recipe status to private'
+      else
+        @recipe.update(public: true)
+        flash[:notice] = 'You have updated the recipe status to public'
+      end
+      redirect_to recipe_path
+    else
+      redirect_to recipe_path(params[:id]), flash: { alert: 'Please sign up or login!' }
+    end
   end
 
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description)
   end
 end

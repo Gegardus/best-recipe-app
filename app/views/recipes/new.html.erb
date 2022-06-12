@@ -1,25 +1,26 @@
-<div class="container">
-<%= form_with model:@new_recipe,url: user_recipes_path(current_user), method: :post, local: true  do |form| %>
- <div class="mb-3">
-      <%= form.label :name ,class: "form-label" %>
-      <%= form.text_field :name ,class: "form-control" %>
-   </div>
- <div class="mb-3">
-      <%= form.label :preparation_time ,class: "form-label" %>
-      <%= form.text_field :preparation_time ,class: "form-control" %>
-   </div>
-   <div class="mb-3">
-      <%= form.label :cooking_time ,class: "form-label" %>
-      <%= form.text_field :cooking_time ,class: "form-control " %>
-     </div>
-      <div class="mb-3">
-      <%= form.label :description ,class: "form-label" %>
-      <%= form.text_area :description ,class: "form-control text-area" %>
-     </div>
-      <div class="mb-3">
-      <%= form.check_box  :public , { checked: true }, true, false  %>
-      <%= form.label :public ,class: "form-label " %>
-     </div>
-    <%= form.submit "Add new recipe" ,class:  "btn btn-primary" %>
-<% end %>
-     </div>
+<div class="recipes-new-c">
+  <h3 class='recipes-new-h3'> Add Recipe</h3>
+  <%= form_with url: recipes_path, scope: :recipe do |form| %>
+    <div class="foods-new-div">
+    <%= form.label :Name, class:"form-label" %><br>
+    <%= form.text_field :name, class: 'form-control', require: true %>
+    </div>
+
+    <div class="foods-new-div">
+    <%= form.label :Preparation_Time, class:"form-label" %><br>
+    <%= form.text_field :preparation_time, class: 'form-control', require: true %>
+    </div>
+
+    <div class="foods-new-div">
+    <%= form.label :Cooking_Time, class:"form-label" %><br>
+    <%= form.text_field :cooking_time, class: 'form-control', require: true %>
+    </div>
+    
+    <div class="foods-new-div">
+    <%= form.label :Description, class:"form-label" %><br>
+    <%= form.text_area :description, class: 'form-control', require: true %>
+    </div>
+
+    <%= form.submit "Submit", class: "foods-new-btn" %>
+  <% end %>
+</div>
