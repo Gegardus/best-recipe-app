@@ -1,6 +1,6 @@
-@import 'boostrap';
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons';
+@import "boostrap";
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
 
 /* CUSTOM STYLING */
 
@@ -23,7 +23,7 @@ body {
   padding: 15px 50px;
   box-shadow: 0 5px #ededed;
   width: 100%;
-  margin-top: 10px;  
+  margin-top: 10px;
 }
 
 .home {
@@ -34,7 +34,7 @@ body {
 }
 
 .menu {
-  display: flex;  
+  display: flex;
 }
 
 .nav-link {
@@ -66,14 +66,13 @@ body {
 }
 
 .shopping {
-  position:absolute;
+  position: absolute;
   left: 555px;
- 
 }
 
 .to_shop {
-  color:gold;
-  text-decoration: none;  
+  color: gold;
+  text-decoration: none;
   background-color: #51517e;
   padding: 5px 10px;
   border-radius: 5rem;
@@ -85,7 +84,7 @@ body {
 .alert {
   margin-left: 30px;
   margin-top: 15px;
-  color: #7CFC00;
+  color: #7cfc00;
   font-size: 18px;
 }
 
@@ -132,7 +131,7 @@ body {
 /* foods page */
 
 .foods-c {
-  margin: 50 50;
+  margin: 50px 50px;
 }
 
 .foods-h3 {
@@ -205,11 +204,11 @@ body {
 
 .recipes-desc {
   margin-right: 50px;
-  color: #274b81; 
+  color: #274b81;
 }
 
 .name {
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .recipes-h3 {
@@ -329,7 +328,6 @@ body {
 .show-modify-btn,
 .show-dlt-btn {
   background-color: #51517e;
-  border: none;
   border: none;
   padding: 5px 8px;
   border-radius: 5px;
