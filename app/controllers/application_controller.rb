@@ -14,8 +14,6 @@
 #   end
 # end
 
-# frozen_string_literal: true
-
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
@@ -28,4 +26,3 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password) }
   end
 end
-
